@@ -3,7 +3,7 @@ import React, { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { startLoading , finishLoading } from "../redux/slices/loadingSlice";
 
-export default function useLoading (type){
+export default function useLoading (){
     const dispatch = useDispatch()
   const { loading} =  useSelector(state=>state.loading)
   

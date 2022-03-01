@@ -1,0 +1,55 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100px;
+    height: 100px;
+    font-size:60px;
+    color :azure;
+    transition: all 0.3s ease;
+    animation: rotating 1s linear infinite;
+
+}
+.loader {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: conic-gradient(lightgray, transparent);
+  
+   
+  }
+  
+  .loading::before {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color :azure;
+    width: 100px;
+    height: 100px;
+    
+   
+   
+  }
+  
+  @keyframes rotating {
+      from {
+          transform: rotate(360deg);
+          
+      }
+      to {
+          transform: rotate(0deg);
+      }
+  }
+
+.wrapper {
+    padding:10px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width:100px ;
+    height: 100%;
+   
+}
+

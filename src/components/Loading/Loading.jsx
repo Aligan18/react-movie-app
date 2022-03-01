@@ -1,8 +1,9 @@
 import React from 'react'
+import classes from './Loading.module.css'
 
 const Loading = () => {
   return (
-    <div>Loading</div>
+    <div className={classes.wrapper}><i className={classes.loading+" fa-solid fa-atom"}></i></div> 
   )
 }
 

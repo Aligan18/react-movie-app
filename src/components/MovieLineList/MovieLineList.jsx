@@ -12,7 +12,7 @@ const MovieLineList = ({clickToCard, cards , pagination }) => {
     let observer = useRef()
    
     useEffect(()=>{
-        
+        console.log('isLoading',isLoading)
         if (isLoading) {return}
         if (observer.current) {observer.current.disconnect()}
         
@@ -44,13 +44,14 @@ const MovieLineList = ({clickToCard, cards , pagination }) => {
                 </div>
 
                 <div className={classes.movieCards}>
+                
                 { info.movies.map(movie=>
                         
                     <MovieCard key={movie.id} info = {movie} handleClick={clickToCard}/>
 
                 )}
-                {isLoading&& <Loading/>}
-                <div ref={endRef} className={classes.end}>привет</div>
+                <Loading/>
+                <div ref={endRef} />
                 </div>
             </div>
 
