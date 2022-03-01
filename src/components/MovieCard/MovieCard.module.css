@@ -1,0 +1,36 @@
+
+
+
+.card{
+    margin-right:10px;
+    width: 140px;
+    min-width: 140px;
+    height: 221px;
+    background-color:#101825;
+    position:relative;
+   
+}
+
+
+.hideTitle{
+    background-color:rgb(16, 24, 37, 0.6);
+    width:100%;
+    height: 100%;
+    position:absolute;
+    top:0px;
+    color:white;
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hideTitle:hover{
+
+    opacity: 1;
+}
+
+.img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+}

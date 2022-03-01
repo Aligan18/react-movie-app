@@ -1,0 +1,78 @@
+.img{
+    z-index: 2;
+    box-shadow: inset 50px 50px 50px 50px #000; /**задаём тень**/
+    min-width:500px;
+    height: 755px;  
+    width: 100%;
+   
+    position: relative;
+  
+}
+.posterBox{
+    height: 100vh;
+    width: 40%;
+    min-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+.poster{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    height: 80%;
+    width: 100%;
+ 
+}
+.wrapper{
+    background:black;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+.info {
+    padding-top:11px ;
+    width:60%;
+    height: 90vh;
+    padding-right:80px;
+}
+
+.infoTab{
+  
+}
+
+
+
+
+.list{
+   
+    padding: 20px;
+}
+
+.title{
+    font-size:65px;
+    font-weight:bold
+}
+
+.titleBox{
+    margin: 40px 0px;
+}
+
+.iframe{
+    width: 100% ;
+    height:100%; 
+}
+
+
+.videoBox{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 57vh;
+}

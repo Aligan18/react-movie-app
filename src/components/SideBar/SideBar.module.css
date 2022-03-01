@@ -1,0 +1,49 @@
+.sideBar{
+    
+    position: sticky ;
+    display: block;
+   
+    top:0 ;
+    left:0 ;
+    padding:40px;
+    color:white;
+}
+.img{
+   
+    height:100px;
+    width:100px;
+}
+.imgBox{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    color:#00d8ff;
+    margin-bottom:20px;
+}
+.list{
+   
+    padding: 20px;
+}
+
+.line{
+    cursor: pointer;
+    padding:0px 30px ;
+    margin:10px;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    margin-left:15px;
+    margin-bottom: 5px;
+}
+.imgBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

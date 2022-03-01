@@ -1,0 +1,19 @@
+.line{
+    padding:0px 20px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.public{
+
+    padding:0px 30px ;
+    margin:10px;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+.title{
+    margin-left:15px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,27 @@
+.logoBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    cursor: pointer;
+
+}
+.imgBox{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+   
+    height:60px;
+    width:60px;
+
+}
+.titleLogo{
+    display: flex;
+    justify-content: center;
+    color:#00d8ff;
+    margin-left:20px;
+    margin-bottom: -7px;
+}

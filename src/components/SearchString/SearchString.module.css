@@ -1,0 +1,27 @@
+.searchBox{
+   
+    width:100%;
+}
+
+.search{
+    width:100%;
+    border-radius: 10px;
+}
+
+.resultBox{
+    padding: 20px;
+    width:50%;
+
+}
+.wrapper{
+    position:sticky;
+    top:0px;
+    left:20px;
+    width:100%;
+    background:#13131d;
+    color:white;
+}
+.line{
+    cursor: pointer;
+    padding:2px;
+}

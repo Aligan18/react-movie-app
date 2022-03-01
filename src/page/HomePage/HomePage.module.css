@@ -1,0 +1,92 @@
+.home{
+    min-height: 100vh;
+    display: flex;
+   
+    justify-content: space-between;
+   
+    background-color: #101825;
+    
+}
+.sideBar{
+    
+    width:20%;
+    background-color: #13131d;
+}
+.search_sticky{
+    position:sticky;
+    top:0px;
+    height: 30px;
+    left:20px;
+    z-index: 2;
+    background-color: #101825;
+    margin:20px 0px;
+}
+.search{
+   
+    width:80%;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.movieList{
+    padding:0px 40px ;
+    
+    width:80%; 
+    
+}
+.title{
+    color: white;
+    display: flex;
+    justify-content: start;
+}
+
+.movieCards{
+   height: 240px;
+    display:flex;
+    justify-content: flex-start;
+    overflow-y: hidden;
+    margin-top:0px;
+    margin-bottom:20px;
+}
+
+.input_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:sticky;
+    top:0px;
+    left:20px;
+   
+}
+.buttons{
+    background-color:#101825;
+     border-radius: 5px;
+     border:none;      
+     margin-left: 10px;
+     color: white ;
+    font-size: larger;
+}
+.buttons:hover{
+    color:#00d8ff;
+}
+
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #13131d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 5px;
+}
+.end {
+    background: red;
+    width:50px;
+    height:100%;
+
+}

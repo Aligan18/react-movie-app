@@ -1,0 +1,31 @@
+.title{
+    color: white;
+    display: flex;
+    justify-content: start;
+}
+.movieCards{
+    height: 240px;
+     display:flex;
+     justify-content: flex-start;
+     overflow-y: hidden;
+     margin-top:0px;
+     margin-bottom:20px;
+ }
+ .end {
+    background: red;
+    width:50px;
+    height:100%;
+
+}
+
+::-webkit-scrollbar { width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #13131d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+  border-radius: 5px;
+}
