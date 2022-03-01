@@ -60,17 +60,7 @@
     left:20px;
    
 }
-.buttons{
-    background-color:#101825;
-     border-radius: 5px;
-     border:none;      
-     margin-left: 10px;
-     color: white ;
-    font-size: larger;
-}
-.buttons:hover{
-    color:#00d8ff;
-}
+
 
 
 ::-webkit-scrollbar { width: 10px; }
