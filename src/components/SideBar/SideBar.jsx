@@ -18,7 +18,7 @@ const SideBar = ({genresList, setSelectedGenres}) => {
         },
        
         {
-            title :'My favorite list',
+            title :'My favorite',
             icon:'far fa-list-alt',
             link:`/movie/favorite/${id}`,
         },
