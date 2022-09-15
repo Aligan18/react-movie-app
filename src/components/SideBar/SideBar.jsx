@@ -2,11 +2,12 @@ import React from 'react';
 import classes from './SideBar.module.css'
 import image from '../../source/logo.png'
 import GenresDropdown from '../GenresDropdown/GenresDropdown';
+import IconSideBar from '../IconSideBar/IconSideBar'
 import {useAuth} from '../../hooks/useAuth'
 import { useNavigate } from 'react-router-dom';
 
 
-const SideBar = ({genresList, setSelectedGenres}) => {
+const SideBar = ({genresList, setSelectedGenres, changeFlag , flag}) => {
     const  navigate = useNavigate() 
     const {id} = useAuth()
     
@@ -39,6 +40,7 @@ const SideBar = ({genresList, setSelectedGenres}) => {
 
 
   return <div className={classes.sideBar}>
+    
     <div className={classes.imgBox}>
         <img className={classes.img} alt='' src={image}/>
     </div>

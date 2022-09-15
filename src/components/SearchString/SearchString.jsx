@@ -5,14 +5,16 @@ import { useNavigate } from 'react-router-dom';
 
 const SearchString = () => {
     const navigate = useNavigate()
-    const [value, setValue] = useState()
+    const [value, setValue] = useState("")
     const [resultList, setResultList] = useState([])
     let timer
     const handleChange =(event)=>{
         clearTimeout(timer)
 
         setTimeout(()=>{
-            setValue(event.target.value)
+            if (event.target.value !== undefined){
+                setValue(event.target.value)
+            }
         },500)
         
     }
@@ -34,6 +36,7 @@ const SearchString = () => {
         navigate(`/movie/info/${type}-${info.id}`)
        
     }
+    console.log(value, 'Search string value')
 
  
 
@@ -45,7 +48,7 @@ return <div className={classes.wrapper}>
             </div>
             { resultList && <div classes={classes.resultBox}>
                                 {resultList.map(item=>
-                                    {return item.title!=='UNdefined'&&
+                                    {return item.title !== undefined &&
                                         <div className={classes.line} onClick={()=>handlerClick(item)}>
                                             <h5 > {item?.title}</h5>
                                             <h5 > {item?.name}</h5>

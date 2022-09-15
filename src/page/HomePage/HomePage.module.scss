@@ -1,21 +1,31 @@
 .home{
-    min-height: 100vh;
+    
     display: flex;
    
     justify-content: space-between;
-   
+  
     background-color: #101825;
     
 }
 .sideBar{
-    min-width: 300px;
-    width:20%;
+    
+    width:100%;
     background-color: #13131d;
+    @media only screen and (max-width: 768px) {
+             
+    position: absolute ;
+
+   z-index: 1;
+    top:0 ;
+    left:0 ;
+    
+    color:white; 
+        } 
 }
 .search_sticky{
     position:sticky;
     top:0px;
-    height: 30px;
+    height: 50px;
     left:20px;
     z-index: 2;
     background-color: #101825;
@@ -31,9 +41,20 @@
   
 }
 .movieList{
+
     padding:0px 40px ;
+    width:70%; 
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+          width: 100%;
+    } 
+    @media only screen
+    and (min-width: 978px)
+    and (max-width: 1024px) {
+          width: 58%;
+    } 
     
-    width:80%; 
     
 }
 .title{
@@ -79,4 +100,12 @@
     width:50px;
     height:100%;
 
+}
+
+.icon {
+    font-size: 27px;
+    margin : 15px;
+    color:#00d8ff;
+  
+   
 }
