@@ -65,6 +65,7 @@ const HomePage = () => {
     const getMovieListByGenres= async(page)=>{
         function diff(a, b) {
             return a.filter(function(i) {return b.indexOf(i) < 0;});
+            
         };
         const res = await fetchGenre.getMovieListByGenres(selectedGenres,page)
         res && changeLoading(false);
@@ -76,6 +77,8 @@ const HomePage = () => {
 
     //запрос списка популярных фильмов 
     const getPopularMovie= async(page)=>{
+
+
         const res =  await fetchMovie.getPopularMovie(page)
         res && changeLoading(false)
         const popMovie = [{ title:'Popular Movies',movies:  [...popularMovie[0].movies, ...res]}]
