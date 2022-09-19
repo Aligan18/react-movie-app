@@ -1,0 +1,9 @@
+.wrapper{
+    font-size: 27px;
+    color:#00d8ff;
+    margin-right: 20px;
+    @media only screen and (min-width: 769px)
+    {
+          display: none;
+     } 
+}

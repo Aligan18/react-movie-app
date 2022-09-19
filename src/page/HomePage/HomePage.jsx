@@ -1,7 +1,8 @@
 import React, {useEffect,  useState} from 'react';
 import SearchString from '../../components/SearchString/SearchString'
 import SideBar from '../../components/SideBar/SideBar'
-import classes from './HomePage.module.css'
+import IconSideBar from '../../components/IconSideBar/IconSideBar';
+import classes from './HomePage.module.scss'
 
 import fetchMovie from '../../fetching/fetchMovie'
 import fetchGenre from '../../fetching/fetchGenre'
@@ -25,6 +26,17 @@ const HomePage = () => {
     const [genresList, setGenresList] = useState([])
     const [movieByGenres, setMovieByGenres] = useState([{movies:[{genre_ids:[]}]}])
     const [popularMovie, setPopularMovie] = useState([{movies:[]}])
+    const [showLeftSideBar , setShowLeftSideBar] = useState(true)
+   
+    const [windowDimensions, setWindowDimensions] = useState( getWindowDimensions())
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+          width,
+          height
+        };
+      }
+
 
 
     // переход на страницу с информацией 
@@ -91,22 +103,43 @@ const HomePage = () => {
     
    
     useEffect(()=>{
+       
         getTvSerials(1)
         getGenresList()
         getPopularMovie(1)
     },[])
- 
+
+   
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+      if(window.innerWidth>789){
+        setShowLeftSideBar(true)
+      }
+      else{
+        setShowLeftSideBar(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
     
     
     
 
   return <div className={classes.home}>
-              <div className={classes.sideBar}>
-                  <SideBar genresList={genresList} setSelectedGenres={setSelectedGenres}/>
-              </div>
+            { showLeftSideBar?
+                <div className={classes.sideBar}>
+                    <SideBar changeFlag={setShowLeftSideBar} flag={showLeftSideBar}  genresList={genresList} setSelectedGenres={setSelectedGenres}/>
+                </div>
+                :<></>
+            }
+              
               <div className={classes.movieList}>
                 <div className={classes.search_sticky}>
                     <div className={classes.input_wrapper}>
+                    <IconSideBar changeFlag={setShowLeftSideBar} flag={showLeftSideBar} className={classes.icon}/>
                         <div className={classes.search}>
                             <SearchString  />
                         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './GoHomeButton.module.css'
+import classes from './GoHomeButton.module.scss'
 import  {useNavigate}  from 'react-router-dom'
 import image from '../../source/logo.png'
 import {routersPath } from '../../router/router'
