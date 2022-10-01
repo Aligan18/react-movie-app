@@ -4,15 +4,20 @@ import GoHomeButton from '../../components/GoHomeButton/GoHomeButton'
 import Form from '../../components/Form/Form'
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { useForm } from 'react-hook-form'
-import auth from '../../firebase/firebase'
-
+import {auth} from '../../firebase/firebase'
+import  {useNavigate}  from 'react-router-dom'
 import {setUser} from '../../redux/slices/userSlice'
 import { useDispatch } from 'react-redux';
+import { routersPath } from '../../router/router';
+import { useState } from 'react';
+import Loading from '../../components/Loading/Loading';
 
 
 
 
 const Login = () => {
+  const [loading, setLoading] =useState(false);
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const { register,
         handleSubmit,
@@ -39,7 +44,7 @@ const Login = () => {
     const onSubmit =(data)=>{
         const email = data.email
         const password = data.password
-
+        setLoading(true)
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           // Signed in 
@@ -49,11 +54,14 @@ const Login = () => {
                               id:user.uid, 
                               token:user.accessToken
                             }))
+            setLoading(false)
+            navigate(routersPath.HOME)
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.log(errorCode, errorMessage)
+          setLoading(false)
         });
     }
  
@@ -61,9 +69,16 @@ const Login = () => {
     <div className={classes.goBack}>
         <GoHomeButton/>
     </div>
-    <div className ={classes.form}>
-        <Form handleSubmit={handleSubmit} typeForm={signIn} errors={errors} onSubmit={onSubmit} typePage={'Login'}/>
-    </div>
+
+    {loading ? <div className={classes.loading }>
+
+        <Loading/>
+      </div>
+      :
+      <div className ={classes.form}>
+          <Form handleSubmit={handleSubmit} typeForm={signIn} errors={errors} onSubmit={onSubmit} typePage={'Login'}/>
+      </div>
+    }
 </div>
   
   )

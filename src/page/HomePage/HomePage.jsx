@@ -28,7 +28,7 @@ const HomePage = () => {
     const [popularMovie, setPopularMovie] = useState([{movies:[]}])
     const [showLeftSideBar , setShowLeftSideBar] = useState(true)
    
-    const [windowDimensions, setWindowDimensions] = useState( getWindowDimensions())
+    const [ setWindowDimensions] = useState( getWindowDimensions())
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
         return {

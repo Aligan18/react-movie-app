@@ -12,6 +12,7 @@ const Form = ({handleSubmit, typeForm, errors,onSubmit,typePage}) => {
   return (
     <div className={classes.body}>
     <div className={classes.wrapper}>
+    
      <h1 className={classes.h1}>{typePage}</h1>
         <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
             
