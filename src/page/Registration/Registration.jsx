@@ -4,10 +4,11 @@ import classes from './Registration.module.css'
 import GoHomeButton from '../../components/GoHomeButton/GoHomeButton'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useForm } from "react-hook-form";
-import auth from '../../firebase/firebase'
+import {auth} from '../../firebase/firebase'
 
 const Registration = () => {
 
+  
   const { register,
     handleSubmit,
     formState:{errors},

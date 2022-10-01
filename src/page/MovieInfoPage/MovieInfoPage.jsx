@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import SideBar from '../../components/SideBar/SideBar'
 import classes from './MovieInfoPage.module.css'
-
+import {useAuth} from '../../hooks/useAuth'
 import Actors from '../../components/Actors/Actors'
 import SearchString from '../../components/SearchString/SearchString';
 import {Tabs , Tab } from 'react-bootstrap'
@@ -14,8 +14,11 @@ import TrailerVideo from '../../components/TrailerVideo/TrailerVideo';
 
 import GoHomeButton from '../../components/GoHomeButton/GoHomeButton';
 import useLoading from '../../hooks/useLoading';
+import useAddToFavorite from '../../hooks/useAddToFavorite';
 
 const MoveInfoPage = () => {
+
+  const {isAuth} = useAuth()
     const changeLoading = useLoading()
    
    
@@ -70,6 +73,7 @@ const MoveInfoPage = () => {
     }
 
     useEffect(()=>{
+      
         getMovieInfoById(movieId,movieType)
         getSimilarMovieById(1)
         getTrailerList(movieId,movieType)
@@ -78,6 +82,10 @@ const MoveInfoPage = () => {
 
    
   console.log( 'actors', actorsInfo)  
+
+  const addToFavorite = useAddToFavorite(movieId , movieType ,movieInfo.title, movieInfo.poster_path)
+   
+
 
   return ( 
     <div className={classes.wrapper}>
@@ -93,8 +101,16 @@ const MoveInfoPage = () => {
         <div className={classes.info}>
           <SearchString  />
           <div className={classes.titleBox}>
-              <h1 className={classes.title}>{movieInfo?.title}</h1>
-              <h1 className={classes.title}>{movieInfo?.name}</h1>
+              <div>
+                <h1 className={classes.title}>{movieInfo?.title}</h1>
+                <h1 className={classes.title}>{movieInfo?.name}</h1>
+              </div>
+              <div >
+                {isAuth && <div className={classes.bookmark} onClick={()=>addToFavorite()}>
+                      <i className="fa-solid fa-bookmark"></i>
+                </div>
+                }
+              </div>
           </div>
           <div className={classes.infoTab}>
             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
