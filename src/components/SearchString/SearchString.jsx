@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import classes from './SearchString.module.css';
+import classes from './SearchString.module.scss';
 import fetchMovie from '../../fetching/fetchMovie';
 import { useNavigate } from 'react-router-dom';
 

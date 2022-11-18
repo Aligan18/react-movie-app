@@ -1,5 +1,5 @@
 import React , {useState,useRef, useEffect } from 'react';
-import classes from './MovieLineList.module.css'
+import classes from './MovieLineList.module.scss'
 import MovieCard from '../MovieCard/MovieCard';
 import Loading from '../Loading/Loading'
 import useLoading from '../../hooks/useLoading'

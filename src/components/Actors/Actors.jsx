@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard'
-import classes from './Actors.module.css'
+import classes from './Actors.module.scss'
 
 const Actors = ({actors}) => {
  
