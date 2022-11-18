@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from '../../components/Form/Form'
-import classes from './Registration.module.css'
+import classes from './Registration.module.scss'
 import GoHomeButton from '../../components/GoHomeButton/GoHomeButton'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useForm } from "react-hook-form";

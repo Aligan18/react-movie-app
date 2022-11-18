@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate} from 'react-router-dom'
-import classes from './AuthButtons.module.css'
+import classes from './AuthButtons.module.scss'
 import {useAuth} from '../../hooks/useAuth'
 import { removeUser } from '../../redux/slices/userSlice'
 import { useDispatch } from 'react-redux'

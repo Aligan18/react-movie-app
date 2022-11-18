@@ -5,6 +5,11 @@
      margin-left: 10px;
      color: white ;
     font-size: larger;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        font-size: inherit;
+    } 
 }
 .buttons:hover{
     color:#00d8ff;
