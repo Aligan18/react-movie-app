@@ -2,6 +2,12 @@
     color: white;
     display: flex;
     justify-content: start;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        margin-top:10px;
+        
+    }   
 }
 .movieCards{
     height: 240px;

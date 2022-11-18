@@ -1,0 +1,17 @@
+.movieCards{
+    height: 500px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    margin-top:0px;
+    margin-bottom:20px;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        height: 222px;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        overflow-x: visible;
+    }   
+}

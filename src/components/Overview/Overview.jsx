@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
-import classes from './Overview.module.css'
+import classes from './Overview.module.scss'
 import { useNavigate} from 'react-router-dom'
 import MovieLineList from '../MovieLineList/MovieLineList'
 
@@ -23,7 +23,7 @@ const Overview = ({movieInfo, similarMovie, pagination}) => {
         <div className={classes.wrapper}>
             <div className={classes.description}>
 
-               <h2>{movieInfo.overview}</h2> 
+               <h2 className={classes.h2}>{movieInfo.overview}</h2> 
             </div>
             <div className={classes.related_movie}>
             <div className={classes.movieCards}>

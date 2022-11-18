@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SideBar from '../../components/SideBar/SideBar'
-import classes from './MovieInfoPage.module.css'
+import classes from './MovieInfoPage.module.scss'
 import {useAuth} from '../../hooks/useAuth'
 import Actors from '../../components/Actors/Actors'
 import SearchString from '../../components/SearchString/SearchString';
@@ -83,7 +83,7 @@ const MoveInfoPage = () => {
    
   console.log( 'actors', actorsInfo)  
 
-  const addToFavorite = useAddToFavorite(movieId , movieType ,movieInfo.title, movieInfo.poster_path)
+  const addToFavorite = useAddToFavorite(movieId , movieType ,movieInfo.title,movieInfo.name, movieInfo.poster_path )
    
 
 

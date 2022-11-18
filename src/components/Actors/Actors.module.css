@@ -1,9 +1,0 @@
-.movieCards{
-    height: 500px;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    overflow-x: hidden;
-    margin-top:0px;
-    margin-bottom:20px;
-}

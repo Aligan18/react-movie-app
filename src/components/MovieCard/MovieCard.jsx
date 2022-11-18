@@ -19,7 +19,7 @@ const MovieCard = ({info, handleClick}) => {
 
   }
 
-  const addToFavorite = useAddToFavorite(info.id , info.type,info.title, checkType())
+  const addToFavorite = useAddToFavorite(info.id , info.type,info.title,info.name, checkType())
 
 
 

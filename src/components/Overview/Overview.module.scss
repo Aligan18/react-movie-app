@@ -3,6 +3,15 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+   
+}
+.h2{
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        font-size:16px;
+        
+    }   
 }
 .related_movie{
     display: flex;
@@ -15,6 +24,12 @@
     overflow-y: hidden;
     margin-top:0px;
     margin-bottom:20px;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        height: 263px;
+        
+    }   
 }
 
 .wrapper{

@@ -4,13 +4,14 @@ import axios from "axios";
 
 
 
-const useAddToFavorite =(id , type ,title,poster_path )=>{
+const useAddToFavorite =(id , type ,title,name,poster_path )=>{
   const { email , isAuth} =  useAuth()
   const data = {
     id,
     type,
     title,
     poster_path,
+    name,
   
 }
    const addToFavorite =async()=>{
