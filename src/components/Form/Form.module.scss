@@ -8,15 +8,25 @@
   .h1 {
     font-weight: 100;
     color: white;
-    
     padding-bottom: 10px;
-    
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+       display: flex;
+       justify-content: center;
+    } 
   }
   
   .form {
     background: #0e101c;
     max-width: 400px;
     margin: 0 auto;
+
+    @media only screen
+        and (min-width: 120px)
+        and (max-width: 768px) {
+          max-width: 200px;
+        } 
   }
   
   .p {
@@ -98,6 +108,16 @@
       min-width: 470px;
         max-width: 600px;
         margin: 0 auto;
+        @media only screen
+        and (min-width: 120px)
+        and (max-width: 768px) {
+            display: block;
+            min-width: none;
+            position: absolute ;
+            left: 30px;
+            top: 25%;
+            min-width: 80%;
+        } 
         
   }
   

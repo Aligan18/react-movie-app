@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Login.module.css'
+import classes from './Login.module.scss'
 import GoHomeButton from '../../components/GoHomeButton/GoHomeButton'
 import Form from '../../components/Form/Form'
 import {  signInWithEmailAndPassword } from "firebase/auth";

@@ -7,6 +7,14 @@
     left:0 ;
     padding:115px;
     color:white;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        padding:115px 0px;
+        height: 100vh
+    
+    } 
+
 }
 .img{
    
@@ -24,6 +32,14 @@
     justify-content: center;
     color:#00d8ff;
     margin-bottom:20px;
+    @media only screen
+    and (min-width: 120px)
+    and (max-width: 768px) {
+        
+        width: 100%;
+    
+    } 
+    
 }
 .list{
    

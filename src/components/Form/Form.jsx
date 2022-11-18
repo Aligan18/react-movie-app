@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './Form.module.css'
+import classes from './Form.module.scss'
 
 
 const Form = ({handleSubmit, typeForm, errors,onSubmit,typePage}) => {
