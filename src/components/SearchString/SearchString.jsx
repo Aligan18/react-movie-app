@@ -7,15 +7,11 @@ const SearchString = () => {
     const navigate = useNavigate()
     const [value, setValue] = useState("")
     const [resultList, setResultList] = useState([])
-    let timer
+   
     const handleChange =(event)=>{
-        clearTimeout(timer)
 
-        setTimeout(()=>{
-            if (event.target.value !== undefined){
                 setValue(event.target.value)
-            }
-        },500)
+         
         
     }
 
