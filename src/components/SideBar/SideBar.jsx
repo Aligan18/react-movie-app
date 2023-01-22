@@ -5,9 +5,13 @@ import GenresDropdown from '../GenresDropdown/GenresDropdown';
 import IconSideBar from '../IconSideBar/IconSideBar'
 import {useAuth} from '../../hooks/useAuth'
 import { useNavigate } from 'react-router-dom';
+import useWindow from '../../hooks/useWindow';
+
 
 
 const SideBar = ({genresList, setSelectedGenres, changeFlag , flag}) => {
+
+    const [WindowDimensions,desktopSize] = useWindow()
     const  navigate = useNavigate() 
     const {id} = useAuth()
     
@@ -15,7 +19,7 @@ const SideBar = ({genresList, setSelectedGenres, changeFlag , flag}) => {
         {
             title :'Home',
             icon:'fas fa-home',
-            link:'/home',
+            link:'/',
         },
        
         {
@@ -34,6 +38,7 @@ const SideBar = ({genresList, setSelectedGenres, changeFlag , flag}) => {
 
 
     const handleClick=(link)=>{
+        !desktopSize() && changeFlag(false)
         navigate(link)
     }
 
