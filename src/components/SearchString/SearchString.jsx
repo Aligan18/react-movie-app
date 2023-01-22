@@ -39,7 +39,7 @@ const SearchString = () => {
 return <div className={classes.wrapper}>
             <div className={classes.searchBox}>
 
-                <input onChange={(event)=>handleChange(event)} className={classes.search} type={'text'} /> 
+                <input onChange={(event)=>handleChange(event)} value={value} className={classes.search} type={'text'} /> 
 
             </div>
             { resultList && <div classes={classes.resultBox}>

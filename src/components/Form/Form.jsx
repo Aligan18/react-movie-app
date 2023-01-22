@@ -30,6 +30,13 @@ const Form = ({handleSubmit, typeForm, errors,onSubmit,typePage}) => {
             )}
           
             <input className={classes.input} type ='submit'/>
+            <hr/>
+            
+                <h4 className={classes.p}>For testing use this</h4>
+            <div className={classes.flex}>
+                <h5 className={classes.h1}>Login : test@gmail.com </h5>
+                <h5 className={classes.h1}>Password : testtest </h5>
+            </div>
         </form>
     </div>
     </div>
