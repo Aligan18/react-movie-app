@@ -7,15 +7,11 @@ const SearchString = () => {
     const navigate = useNavigate()
     const [value, setValue] = useState("")
     const [resultList, setResultList] = useState([])
-    let timer
+   
     const handleChange =(event)=>{
-        clearTimeout(timer)
 
-        setTimeout(()=>{
-            if (event.target.value !== undefined){
                 setValue(event.target.value)
-            }
-        },500)
+         
         
     }
 
@@ -43,7 +39,7 @@ const SearchString = () => {
 return <div className={classes.wrapper}>
             <div className={classes.searchBox}>
 
-                <input onChange={(event)=>handleChange(event)} className={classes.search} type={'text'} /> 
+                <input onChange={(event)=>handleChange(event)} value={value} className={classes.search} type={'text'} /> 
 
             </div>
             { resultList && <div classes={classes.resultBox}>
