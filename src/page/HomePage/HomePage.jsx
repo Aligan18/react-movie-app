@@ -10,6 +10,7 @@ import { useNavigate} from 'react-router-dom'
 import MovieLineList from '../../components/MovieLineList/MovieLineList';
  import useLoading from '../../hooks/useLoading';
 import AuthButtons from '../../components/AuthButtons/AuthButtons';
+import useWindow from '../../hooks/useWindow';
 
 
 
@@ -26,8 +27,11 @@ const HomePage = () => {
     const [genresList, setGenresList] = useState([])
     const [movieByGenres, setMovieByGenres] = useState([{movies:[{genre_ids:[]}]}])
     const [popularMovie, setPopularMovie] = useState([{movies:[]}])
-    const [showLeftSideBar , setShowLeftSideBar] = useState(true)
-   
+
+
+    const [WindowDimensions,desktopSize] = useWindow()
+    const [showLeftSideBar , setShowLeftSideBar] = useState(window.innerWidth > 789)
+    console.log(WindowDimensions)
     const [ setWindowDimensions] = useState( getWindowDimensions())
     function getWindowDimensions() {
         const { innerWidth: width, innerHeight: height } = window;
@@ -114,18 +118,10 @@ const HomePage = () => {
 
    
   useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-      if(window.innerWidth>789){
-        setShowLeftSideBar(true)
-      }
-      else{
-        setShowLeftSideBar(false)
-      }
-    }
+    setShowLeftSideBar(window.innerWidth > 789)
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize',()=>setShowLeftSideBar(window.innerWidth > 789) );
+    return () => window.removeEventListener('resize',()=>setShowLeftSideBar(window.innerWidth > 789));
   }, []);
     
     
