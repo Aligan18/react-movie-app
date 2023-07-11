@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { deleteRouteId } from "../../lib/deleteRouteId/deleteRouteId";
 import { routersPath } from "../../router/router";
 
-const MovieCard = ({ info, handleDeleteFromFavorite }) => {
+const MovieCard = ({ info, handleDeleteFromFavorite, actors = false }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const goToMoviePage = (info) => {
@@ -24,21 +24,23 @@ const MovieCard = ({ info, handleDeleteFromFavorite }) => {
   };
 
   const renderBookmarkButton = () => {
-    if (deleteRouteId(location.pathname) === routersPath.FAVORITE_MOVIE) {
-      return (
-        <div
-          onClick={() => handleDeleteFromFavorite(email, info.id)}
-          className={classes.bookmark}
-        >
-          <i className="fa-solid fa-circle-xmark"></i>
-        </div>
-      );
-    } else {
-      return (
-        <div onClick={() => addToFavorite()} className={classes.bookmark}>
-          <i className="fa-solid fa-bookmark"></i>
-        </div>
-      );
+    if (!actors) {
+      if (deleteRouteId(location.pathname) === routersPath.FAVORITE_MOVIE) {
+        return (
+          <div
+            onClick={() => handleDeleteFromFavorite(email, info.id)}
+            className={classes.bookmark}
+          >
+            <i className="fa-solid fa-circle-xmark"></i>
+          </div>
+        );
+      } else {
+        return (
+          <div onClick={() => addToFavorite()} className={classes.bookmark}>
+            <i className="fa-solid fa-bookmark"></i>
+          </div>
+        );
+      }
     }
   };
 
