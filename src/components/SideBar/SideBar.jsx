@@ -32,10 +32,12 @@ const SideBar = ({ genresList, setSelectedGenres, changeFlag, flag }) => {
     },
   ];
 
+
   const handleClick = (link) => {
     !desktopSize() && changeFlag(false);
     navigate(link);
   };
+
 
   return (
     <div className={classes.sideBar}>
