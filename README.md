@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+<summary><h1>NextStudyApp</h1></summary>
+<h2></h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h3>✏️ Описание</h3>
+      <strong>ReactMovieApp</strong> - Это первый мой сайт. Данный сайт является каталогом фильмов с возможностью прочитать описание, просмотреть трейлер и увидеть актеров. 
 
-In the project directory, you can run:
+<h3>🎨 Сайт</h3>
+Посетите сайт: https://movie-app-three-rose.vercel.app/
 
-### `npm start`
+<h1></h1>
+<summary><h2>📚 Стек технологий</h2></summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<table>
+<tr>
+<td><strong>Frontend</strong></td>  
+</tr>
+<tr>
+<td>React</td>  
+</tr>
+<tr>
+<td>Redux</td>  
+</tr>
+<tr>
+<td>Firebase</td> 
+</tr>
+<tr>
+<td>TMBD API</td>  
+</tr>
+<tr>
+<td>Axios</td>  
+</tr>
+<tr>
+<td>Scss</td> 
+</tr>
+<tr>
+<td>React Hook Form</td>  
+</tr>
+</table> 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2></h2>
+<details><summary><strong>✨ Screenshots</strong></summary>
+| ![Главная страница](/pictures/Главная.jpg "Главная страница") | | :--: | | *Главная страница* |
+| ![Курсы](/pictures/Курсы.jpg "Курсы") | | :--: | | *Курсы* |
+| ![Страница редактирования ](/pictures/Редактирование.jpg "Страница редактирования") | | :--: | | *Страница редактирования* |
+| ![Темная тема](/pictures/Темная_тема.jpg "Темная тема") | | :--: | | *Темная тема* |
+| ![Светлая тема](/pictures/Светлая_тема.jpg "Светлая тема") | | :--: | | *Светлая тема* |
 
-### `npm test`
+</details>
+<h2></h2>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<summary><h2>:dizzy: Функционал</h2></summary>
+-  Главная страница с популярными новинками 
+-  Получение списка похожих фильмов 
+-  Имеется сортировка по жанрам
+-  Авторизация с дальнейшим сохранением фильмов в избранное 
+-  Адаптивный дизайн 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h2></h2>
+<summary><h2>🛠️ Установка</h2></summary>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Сделайте Fork проекта. Нажмите на значок Fork в правом верхнем углу, чтобы начать.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Клонировать проект можно с помощью следующей команды:
+  
+      ~~~
+      git clone https://github.com/Aligan18/react-movie-app.git
+      ~~~
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Перейдите в каталог проекта
 
-## Learn More
+      ~~~
+     react-movie-app
+      ~~~
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Перейдите в соответствующий каталог клиента 
+      ~~~
+      cd client
+      ~~~
+5. Установите зависимости с помощью npm install
+      ~~~
+      npm install 
+      ~~~
+7. Запустите npm start в каталоге клиента 
+      ~~~
+      npm run start
+      ~~~
+   
